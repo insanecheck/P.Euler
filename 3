@@ -1,0 +1,19 @@
+def prime(n):
+  i=2 #1 is taken out
+  while i < n :
+    if n % i == 0:
+        cnumb = n/i
+    else :
+        i+=1
+        continue
+    a=2
+    while a < cnumb:
+        if cnumb % a == 0 :
+            break
+        a += 1
+    if a == cnumb:
+        break
+    i += 1
+  return (cnumb)
+
+print (prime(600851475143))

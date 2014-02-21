@@ -1,0 +1,23 @@
+test =  []
+def confirmation(num):
+    return str(num) == str(num)[::-1]
+
+def bigp(bottom, top):
+    z = 0
+    for a in range(top,bottom, -1):
+        for b in range(top,bottom,  -1):
+
+            if confirmation(a * b):
+                z = a * b
+                test.append(z)
+    return test
+print (bigp(100,999))
+
+highest = 0
+for i in range(0, len(test)-1):
+    if test[i] > highest:
+        highest = test[i]
+    else:
+        continue
+
+print (highest)
